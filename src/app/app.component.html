@@ -36,3 +36,15 @@
   <!-- <div><img src="{{ images[currentPage].url }}"></div> -->
   <div><img [src]="images[currentPage].url"></div>
 </div>
+
+<div [ngSwitch]="currentPage">
+  <div *ngSwitchCase="0">
+    Current page is 0
+  </div>
+  <div *ngSwitchCase="1">
+    Current page is 1
+  </div>
+  <div *ngSwitchDefault>
+    Current page is set to default
+  </div>
+</div>
